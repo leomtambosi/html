@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>forms em HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>formulario em HTML</h1>
+    </header>
+    <article>
+        <form method="POST" id="fcontato" action="mailto:leonardomtambosi@gmail.com" oninput="result.value=parseInt(valor_01.value)+parseInt(valor_02.value)">
+            <fieldset>
+                <legend>Identificação</legend>
+            <label for="cnome">nome:</label><br />
+            <input autocomplete="off" type="text" size="50" name="tnome" id="cnome" required="required" />
+            <br /><br />
+            <p>você mora:</p>
+            <input type="radio" name="tipo" id="bra" value="b" />
+            <label for="bra">Brasil</label><br />
+            <input type="radio" name="tipo" id="ale" value="a" />
+            <label for="ale">Alemanha</label><br />
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <legend>informações extras</legend>
+            <p>qual time voce torce?</p>
+            <input type="checkbox" id="cor" name="cor" value="co" />
+            <label for="cor">Corinthians</label><br />
+            <input type="checkbox" id="pal" name="pal" value="pa" />
+            <label for="pal">Palmeiras</label><br />
+            <input type="checkbox" id="fla" name="fla" value="fl" />
+            <label for="fla">Flamengo</label><br />
+            <input type="checkbox" id="vas" name="vas" value="va" />
+            <label for="vas">Vasco</label><br /><br />
+            <label for="cores">selecione sua cor preferida</label>
+            <select id="cores" name="cores">
+                <option value="vermelho">Vermelho</option>
+                <option value="azul">Azul</option>
+                <option value="rosa">Rosa</option>
+                <option value="verde">Verde</option>
+                <option value="preto">Preto</option>
+            </select><br /><br/>
+            <label for="cid">escolha sua cidade:</label>
+            <input autocomplete="on" list="cidade" name="cid" id="cid" placeholder="Sua Cidade" />
+            <datalist id="cidade">
+                <option value="Joinville"></option>
+                <option value="Chapecó"></option>
+                <option value="Florianópolis"></option>
+                <option value="Blumenau"></option>
+                <option value="Brusque"></option>
+            </datalist>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>numero 1 a 100</legend>
+            0
+            <input type="range" id="valor_01" name="valor_01" />
+            100 +
+            <input type="number" id="valor_02" name="valor_02" />
+            =
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>opiniões</legend>
+            <p>sugestões,não xingue por favor:</p>
+            <textarea name="message" rows="10" cols="60" placeholder="Escreve aqui ó" required></textarea>
+            </fieldset>
+            <br />
+            <input type="submit" value="enviar" />
+        </form>
+    </article>
+    <br />
+    <footer>
+        <small>leozinho</small>
+    </footer>
+</body>
+
+</html>
